@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/functions.js"></script>
+        
+        <link type="text/css" rel="stylesheet" href="css/cabecalho.css">
+        <link type="text/css" rel="stylesheet" href="css/geral.css">
+    </head>
+    
+    <body>
+    	<!-- Lista de casos -->
+        <table id="cases-table">
+            <tr>
+                <td>
+                    <button onClick="location.href='pastas.html';">Caso 1</button>
+                </td>
+                <td>
+                    <button disabled>Caso 2</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button disabled>Caso 3</button>
+                </td>
+                <td>
+                    <button disabled>Caso 4</button>
+                </td>
+            </tr>
+        </table>
+        
+        <!-- Cabeçalho -->
+        <footer>
+            <button onClick="window.history.back();" id="back"></button>
+            <button onClick="location.href='info.html';" id="info"></button>
+            <div id="page-title"></div>
+        </footer>
+    </body>
+</html>

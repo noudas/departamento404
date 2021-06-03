@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
+        <link rel="shortcut icon" href="../layout/eye-tab.png">
+        <title>Caso 1 - Departamento 502</title>
+        
+		<script src="../js/jquery-3.2.1.min.js"></script>
+        <script src="../js/functions.js"></script>
+        
+        <link type="text/css" rel="stylesheet" href="../css/cabecalho.css">
+        <link type="text/css" rel="stylesheet" href="../css/geral.css">
+        <link type="text/css" rel="stylesheet" href="../css/imagem.css">
+    	<link type="text/css" rel="stylesheet" href="../css/medias.css">
+    </head>
+    
+    <body bgcolor="#202634"><!-- Fundo azul -->
+        <div class="principal">
+        	<!-- Img -->
+        	<div class="responsive">
+        		<div class="gallery" style="border:2px solid">
+        			<a>
+        				<img class="capa" src="img/ficha-esposa.png" alt="Esposa" width="300" height="200" id="esposa" onClick="imgClickBDN('esp','esposa');">
+            		</a>
+                    
+            		<div class="desc">doc_03</div>           
+        		</div>
+        	</div>
+            
+            <div id="myModal" class="modal" onClick="changeImage(document.getElementById('img01').name);">
+                <span class="close" onClick="Close();">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+            </div>
+        
+        	<div class="clearfix"></div>
+            
+            <spam id="imagens" style="display:none">
+                <!--BADEN POWELL -->
+                <img src="img/ficha-esposa.png" alt="ESPOSA" width="300" height="200" name="esp">    
+            </spam>
+        </div>
+        
+        <!-- Cabecalho -->
+		<footer id="f-doc">
+            <button onClick="window.history.back();" id="back"></button>
+            <div id="page-title">FICHA 2</div>
+        </footer>
+	</body>
+</html>

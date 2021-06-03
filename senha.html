@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="layout/eye-tab.png">
+        <title>Departamento 502</title>
+        
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/functions.js"></script>
+        
+        <link type="text/css" rel="stylesheet" href="css/geral.css">
+        <link type="text/css" rel="stylesheet" href="css/cabecalho.css">
+        <link type="text/css" rel="stylesheet" href="css/medias.css">
+    </head>
+    
+    <body bgcolor="#202634"><!-- Fundo azul -->
+    	<div class="big-logo"></div>
+        <div class="big-logo-stop"></div>
+        
+    	<!-- Campo da senha -->
+        <form>
+                <div id="pass-title">SENHA DO USUÁRIO</div>
+                <input id="pass" onClick="resetError();"><br>
+                <button id="pass-button" onClick="return verifyPassword();">ENTER</button>
+                <p id="error-msg"></p>
+            </form>
+        
+        <!-- Cabeçalho -->
+        <footer>
+            <button onClick="window.history.back();" id="back"></button>
+            <button onClick="location.href='info.html';" id="info"></button> 
+        </footer>
+    </body>
+</html>

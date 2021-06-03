@@ -1,0 +1,269 @@
+@charset "utf-8";
+html, body {
+	margin:0; padding:0;
+	font-size:5vw;
+	font-family:VCR, sans-serif !important;
+	color:white;
+}
+
+
+/* Fonte */
+@font-face {
+	font-family:VCR;
+	src:url(../font/VCR_OSD_MONO_1.001.ttf)
+}
+@font-face {
+	font-family:Parametric;
+	src:url(../font/ParametricGlitch.ttf);
+}
+@font-face {
+	font-family:Parametric;
+	src:url(../font/ParametricGlitch_Bold.ttf);
+	font-weight:bold;
+}
+
+
+/* Logo */
+#name-wrap {
+	margin:8% auto 14%;
+	width:fit-content;
+}
+
+.parent {
+  position: relative;
+  width: 60%;
+  margin:0 auto; /* positioning tweak */
+}
+
+.parent:before {
+  content: "";
+  display: block;
+  padding-top:57.5%;  /*Taxa de proporção do logo em %*/
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  
+  background:url(../logo/logo-sheet.png) no-repeat 0 0%;
+  background-size: 100%;
+  animation: sprite 10s steps(300) infinite;
+  animation-delay:1s;
+}
+
+@keyframes sprite {
+  from { background-position: 0 0%; }
+  to { background-position: 0 100%; }
+}
+@-webkit-keyframes sprite {
+  from { background-position: 0 0%; }
+  to { background-position: 0 100%; }
+}
+
+.site-name {
+	font-family:Parametric, sans-serif;
+	font-weight:bold;
+	width:fit-content;
+	margin:0 auto;
+	font-size:26px;
+}
+.site-name:last-child { font-size:6vw; }
+
+/* Início */
+#home-button, #home-button input[type="button"] {
+	display:block;
+	margin:30% auto 0;
+	width:fit-content;
+}
+
+#home-desk-warning {
+	display:none;
+	font-size: 2vw;
+    margin:0 auto;
+	text-align:center;
+	padding:0 10px;
+	border:5px solid white;
+}
+
+#home-info {
+	line-height:6vw;
+    margin:40% 0 20px;
+	padding:0 10px;
+	border:5px solid white;
+}
+
+button, input[type="button"] {
+	height:100%;
+	padding:10px;
+	font-size:5vw;
+	font-family:VCR, sans-serif;
+}
+	button:active {
+		outline:none;
+	}
+	button:focus {
+		outline-color:#ff2634;
+	}
+
+
+/* Senha */	
+form {
+	width:fit-content;
+	text-align:center;
+	margin:0 auto;
+}
+
+#home-form { display:none; }
+#error-msg {
+	color:#ff2634;
+	font-size:3vh;
+}
+
+input {
+	padding:5px;
+	margin:10px 0;
+	font-family:VCR, sans-serif;
+	font-size:21px;
+}
+
+#pass-title{
+	width:100%;
+	color:white;
+	font-size:21px;
+	text-align:left;
+}
+
+#pass{
+	padding:10px;
+	
+}
+	#pass:focus {
+		outline:none !important;
+	}
+
+#pass-list {
+	display:none;
+	background-color:hsla(0,0%,100%,0.5);
+	width:70%;
+	margin:0 auto;
+	padding:3% 0;
+	font-size:18px;
+}
+
+#pass-list li {
+	list-style:none;
+	margin-bottom:2%;
+}
+
+/*Lista de fichas*/
+#files-table {
+	width:100%;
+	border-spacing:0;
+}
+	#files-table td {
+		width:50%;
+	}
+
+.row {
+	width:50%;
+	float:left;
+	margin:6% 0 0;
+}
+.row img {
+	max-width:70%;
+	margin-bottom:5px;	
+}
+#button-logo img {
+	max-width:70%;
+	margin-bottom:0;
+}
+.space {
+	opacity:0;
+}
+
+.folder {
+	width:71%;
+	display:block;
+	color:white;
+	text-align:center;
+    padding-left:10px;
+	background-color:transparent;
+	border:1px solid;
+	border-color:white black black white;
+	background-position:top;
+	background-size:cover;
+	margin: auto;
+}
+	.folder:hover {
+		background-color:hsla(0,0%,100%,0.25);
+	}
+	.folder:active {
+		background-color:hsla(0,0%,100%,0.25);
+		border-color:black white white black;
+	}
+
+
+/* Fotos */
+img {
+    max-width: 100%;
+    height: auto;
+}
+.Ibagem {
+	width: 95%;
+	margin: 0 auto;
+}
+
+
+/* Info */
+.info-box {
+	clear:both;
+	color:black;
+	font-size:3vh;
+	overflow:auto;
+	margin:5px;
+	padding:10px;
+	border:2px solid;
+	border-color:black white white black;
+}
+.info-box:first-child {
+	margin-top:10vh;
+}
+.info-box p {
+	margin-top:0;
+}
+.info-box p:last-child {
+	margin-bottom:0;
+}
+
+#info-icon {
+	display:block;
+	width:20%;
+	padding:5px;
+	margin:0 auto 5px;
+	border:2px solid;
+	border-color:white black black white;
+}
+.info-desc {
+	display:block;
+	font-size:4.5vw;
+	padding:5px;
+	margin:0 auto;
+	border:2px solid;
+	border-color:black white white black;	
+}
+
+#rotacao{
+	transform:translate(0,-100px);
+	}
+	
+#rotacao2{
+	transform:translate(0,-160px);
+	}
+	
+/* Vídeo */
+iframe {
+	height:75vh;	
+}

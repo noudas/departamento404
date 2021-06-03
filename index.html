@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="layout/eye-tab.png">
+        <title>Departamento 502</title>
+        
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/functions.js"></script>
+                
+        <link type="text/css" rel="stylesheet" href="css/geral.css">
+        <link type="text/css" rel="stylesheet" href="css/medias.css">
+    </head>
+    
+    <body bgcolor="#202634"><!-- Senha -->
+        <div id="name-wrap">
+            <div class="parent">
+ 				<div class="logo"></div>
+			</div>
+            <div class="site-name">DEPARTAMENTO 502</div>
+            <div class="site-name">Sistema de Investigação Policial</div>
+        </div>
+        
+        <div>
+        	<!-- Aviso para desktop -->
+        	<div id="home-desk-warning">
+            	Este site foi criado tendo em mente dispositivos móveis.<br>
+                Abra-o em seu tablet ou smartphone para poder desfrutá-lo.
+            </div>
+            
+            <!-- Início -->
+        	<span id="home-button">
+                <input type="button" onClick="showCasePass()" value="INICIAR">
+                <div id="home-info">
+                    Explore os arquivos. <br>
+                    Descubra as senhas. <br>
+                    Desvende o mistério.
+                </div>
+            </span>
+            
+            <!-- Campo da senha -->
+            <span id="home-form">
+                <form>
+                    <div id="pass-title">
+                        <center>BEM-VINDO,</center>
+                        <br>
+                        DIGITE SUA CREDENCIAL
+                        <!-- Segredo do sistema: 34st3r-Egg -->
+                    </div>
+                    <input id="pass" onKeyPress="resetError();" onClick="resetError();"><br>
+                    <button id="pass-button" onClick="return verifyPassword();">ENTRAR</button>
+                    <p id="error-msg"></p>
+                </form>
+            </span>
+        </div>
+        <!-- Programador é tipo Chico Xavier.
+        Você abaixa a cabeça e torce pra solução vir do além -->
+        <script>
+			//Altura e largura da janela
+			var w = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+			
+			var h = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+			
+			
+			
+			
+			//Verificar janela do dispositivo
+			if ((w < 1024) //Celulares
+			|| (w === 1024 && h === 768) //iPad paisagem
+			|| (w === 1366 && h === 1024) //iPad pro paisagem
+			|| (w === 1024 && h === 1366)) //iPad pro retrato
+			{
+				//Verificar compatibilidade com Local Storage
+				if (typeof(Storage) !== "undefined") {
+					//Ativar o pulo do botão
+					if (sessionStorage.skip === "1") {
+						var x = document.getElementById("home-form"); //Campo da senha
+						var y = document.getElementById("home-button"); //Botão INICIAR
+						
+						x.style.display = "block";
+						y.style.display = "none";
+					}
+				}
+			} else {
+				var w = document.getElementById("home-desk-warning"); //Aviso pra desktop
+				var y = document.getElementById("home-button"); //Botão INICIAR
+				
+				w.style.display = "block";
+				y.style.display = "none";
+			}
+        </script>
+    </body>
+</html>

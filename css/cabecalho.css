@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Cabeçalho Fixo */
+footer {
+	background-color:#c6c6c6;
+	color:black;
+	width:100%;
+	height:8%;
+	position:fixed;
+	bottom:0px;
+	overflow:hidden;
+    box-sizing: unset;
+	border-top:2px solid white;
+    border-bottom:2px solid black;
+}
+
+footer button {
+	position:relative;
+	float:left;
+	width:7%;
+	height:-webkit-fill-available !important;
+	height:-moz-fill-available !important;
+	height:65%;
+	background-size:60%;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-color:transparent;
+	padding:2% 8px;
+	border-color: white black black white;
+	box-sizing:content-box;
+}
+	footer button:hover {
+		background-color:hsla(0,0%,100%,0.25);
+	}
+	footer button:active {
+		border-color: black white white black;
+		background-color:hsla(0,0%,100%,0.25);
+	}
+#back {
+	background-image:url(../layout/back-arrow.png);	
+}
+#logout {
+	background-image:url(../layout/logout.png);
+}
+
+#page-title{
+	width:85%;
+	float:left;
+	padding:2vh 0;
+	text-align:center !important;
+}
+
+/* Header dos Documentos */
+#f-doc {
+	top:0;
+}
+#f-doc #page-title{
+    margin-top: 1%;
+}
